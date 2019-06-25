@@ -32,6 +32,14 @@ After you started a new dokuwiki container, you can restore your previous backup
 
     docker run --rm -v dokuwiki_data:/data -v $(pwd):/backup alpine:latest tar xzf /backup/dokuwiki-data.tgz /data
 
+## Mount Docker uGeek
+
+```
+docker run -d --name dokuwiki -p 80:80 -v $HOME/docker/dokuwiki/dokuwiki_conf:/dokuwiki-conf -v $HOME/docker/dokuwiki/data:/dokuwiki-data ugeek/dokuwiki:arm
+```
+
+
+
 [0]: https://www.dokuwiki.org/
 [1]: http://alpinelinux.org/
 [2]: https://www.dokuwiki.org/config#configuration_options
