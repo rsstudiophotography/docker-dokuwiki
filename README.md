@@ -39,6 +39,13 @@ docker run -d --name dokuwiki -p 80:80 -v $HOME/docker/dokuwiki/dokuwiki_conf:/d
 ```
 
 
+```
+docker run -d --name dokuwiki -p 80:80 -v $HOME/docker/dokuwiki/dokuwiki_conf:/dokuwiki-conf -v $HOME/docker/dokuwiki/data:/dokuwiki-data ugeek/dokuwiki:amd64
+```
+
+## User
+user: admin
+password: admin
 
 [0]: https://www.dokuwiki.org/
 [1]: http://alpinelinux.org/
